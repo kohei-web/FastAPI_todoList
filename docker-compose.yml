@@ -8,6 +8,7 @@ services:
     - 8000:8000  # ホストマシンのポート8000を、docker内のポート8000に接続
     environment:
       - WATCHFILES_FORCE_POLLING=true  # 環境によってホットリロードのため
+      - PYTHONPATH=/src
 
   db: # MySQLコンテナ
     image: mysql:8.0
